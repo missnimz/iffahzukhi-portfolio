@@ -113,8 +113,9 @@
         items: 1
     });
 
+    
      // Form submission handling
-     document.getElementById("contactForm").addEventListener("submit", function(event) {
+     /*document.getElementById("contactForm").addEventListener("submit", function(event) {
         event.preventDefault();
         
         const form = event.target;
@@ -137,7 +138,7 @@
         .catch(error => {
             alert("Oops! Something went wrong. Please try again.");
         });
-    });
+    });*/
     
 })(jQuery);
 
