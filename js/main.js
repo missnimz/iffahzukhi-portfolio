@@ -112,6 +112,32 @@
         loop: true,
         items: 1
     });
+
+     // Form submission handling
+     document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        
+        const form = event.target;
+        const formData = new FormData(form);
+        
+        fetch(form.action, {
+            method: form.method,
+            body: formData,
+        })
+        .then(response => {
+            if (response.ok) {
+                // Display success message
+                alert("Thank you! Your message has been sent.");
+                form.reset(); // Clear the form
+            } else {
+                // Display error message
+                alert("Oops! Something went wrong. Please try again.");
+            }
+        })
+        .catch(error => {
+            alert("Oops! Something went wrong. Please try again.");
+        });
+    });
     
 })(jQuery);
 
